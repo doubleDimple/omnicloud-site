@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — OmniCloud</title>
+  <meta name="description" content="How the OmniCloud app handles your data, including data accessed through Google APIs.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="assets/icon.png" alt="">OmniCloud</a>
+      <nav>
+        <a href="./">Home</a>
+        <a href="privacy.html" aria-current="page">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective date: October 18, 2026</p>
+
+      <p>This policy describes how the OmniCloud app for iPhone and iPad (“OmniCloud”, “the app”, “we”) handles
+        information. OmniCloud is a client for cloud providers you already use. It is designed to keep your data on your
+        device.</p>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>OmniCloud has no user accounts and operates no servers. We do not collect, receive or store any of your data.</li>
+        <li>The app communicates directly from your device with the cloud providers you connect (Google Cloud, Oracle Cloud,
+          Hetzner Cloud) and with Apple services such as the App Store.</li>
+        <li>Credentials are stored only in your device’s Keychain, limited to this device and not synced to iCloud.</li>
+        <li>There are no advertisements, analytics, tracking or third-party SDKs that collect data.</li>
+      </ul>
+
+      <h2>Information the app stores on your device</h2>
+      <table>
+        <tr><th>Information</th><th>Where it is kept</th><th>Purpose</th></tr>
+        <tr><td>Cloud credentials: Google service account keys or sign-in tokens, Oracle API keys, Hetzner API tokens</td>
+          <td>Device Keychain (this device only)</td><td>Authenticating your requests to the provider you connected</td></tr>
+        <tr><td>Account names you enter, project and region identifiers</td><td>Local database on the device</td>
+          <td>Showing and organizing your connected accounts</td></tr>
+        <tr><td>Cached resource details: instance names, states, IP addresses, machine types, networks, firewall rules</td>
+          <td>Local database on the device</td><td>Showing your resources quickly and offline</td></tr>
+        <tr><td>Public price lists from Google Cloud</td><td>App cache on the device</td><td>Estimating costs and comparing regions</td></tr>
+        <tr><td>Preferences: language, appearance, app lock</td><td>Device settings</td><td>Remembering your choices</td></tr>
+      </table>
+      <p>Root passwords generated when you create a server are shown to you once and are never stored. On Google Cloud,
+        the password is sent to your instance only as a one-way SHA-512 hash and removed from the instance’s metadata after
+        it has been applied.</p>
+
+      <h2 id="google">Data accessed through Google APIs</h2>
+      <p>When you connect Google Cloud with <em>Sign in with Google</em>, OmniCloud requests these permissions:</p>
+      <ul>
+        <li><code>https://www.googleapis.com/auth/cloud-platform</code>: to read and manage Google Cloud resources in the
+          projects you choose.</li>
+        <li><code>openid</code> and <code>email</code>: to show which Google account is connected.</li>
+      </ul>
+      <p>With this access, the app runs these actions, and only when you ask for them:</p>
+      <ul>
+        <li>Lists your Google Cloud projects so that you can choose one.</li>
+        <li>In the project you choose:
+          <ul>
+            <li>Enables the Compute Engine, IAM, Cloud Resource Manager and Cloud Billing (price catalog) APIs.</li>
+            <li>Creates a service account named <code>omnicloud-ios</code>.</li>
+            <li>Grants it the Compute Admin and Service Account User roles.</li>
+            <li>Creates a key for it.</li>
+          </ul>
+          If key creation is not allowed, the app keeps your sign-in token instead.</li>
+        <li>Reads, creates, starts, stops, resizes and deletes Compute Engine instances, and reads and changes VPC firewall
+          rules and subnets.</li>
+        <li>Reads Google’s public Compute Engine price catalog.</li>
+      </ul>
+      <p>Data received from Google APIs is used only to show you your resources and to carry out the actions you request.
+        It is stored only on your device as described above, and it is never transferred to us or to any third party,
+        never used for advertising, and never used to train AI or machine-learning models. No human reads it.</p>
+      <p>OmniCloud’s use and transfer to any other app of information received from Google APIs will adhere to the
+        <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+        including the Limited Use requirements.</p>
+
+      <h2>Other cloud providers</h2>
+      <p>Oracle Cloud and Hetzner Cloud credentials that you enter are used only to call those providers’ APIs from your
+        device, in the same way. Each provider processes your requests under its own privacy policy.</p>
+
+      <h2>Sharing</h2>
+      <p>We do not sell, share or transfer your information. The only parties that receive it are the cloud providers you
+        connect, and only to fulfil your requests. Purchases are handled by Apple through the App Store.</p>
+
+      <h2>Retention and deletion</h2>
+      <ul>
+        <li><em>Data &amp; Privacy</em> in the app can clear all cached resource data, or remove all accounts on this device
+          together with their Keychain credentials.</li>
+        <li>Deleting the app removes its local database and cache. iOS can keep Keychain items after an app is deleted;
+          if you reinstall OmniCloud, it removes any stored credentials that no longer belong to an account. To remove
+          them right away, use <em>remove all accounts</em> before deleting the app.</li>
+      </ul>
+      <p>Resources the app created in your cloud accounts, such as the <code>omnicloud-ios</code> service account and
+        servers, belong to you and remain until you delete them in your cloud console.</p>
+
+      <h2 id="revoke">Revoking Google access</h2>
+      <ul>
+        <li>Remove OmniCloud’s access to your Google account at
+          <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+        <li>In the Google Cloud console, under <em>IAM &amp; Admin › Service accounts</em>, you can delete the
+          <code>omnicloud-ios</code> service account or its keys.</li>
+      </ul>
+
+      <h2>Security</h2>
+      <p>Credentials are protected by iOS Keychain encryption and are only available while the device is unlocked. All
+        network requests use HTTPS directly to the provider. You can also lock the app with Face ID or your device
+        passcode.</p>
+
+      <h2>Children</h2>
+      <p>OmniCloud is a tool for managing cloud infrastructure and is not directed to children under 13.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this policy: <a href="mailto:lovele.cn@gmail.com">lovele.cn@gmail.com</a></p>
+    </article>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <a href="./">Home</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:lovele.cn@gmail.com">Contact</a>
+      <div>© 2026 OmniCloud</div>
+    </div>
+  </footer>
+</body>
+</html>

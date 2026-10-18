@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OmniCloud — Multi-cloud console for iPhone and iPad</title>
+  <meta name="description" content="OmniCloud is an iPhone and iPad app for managing your own Google Cloud, Oracle Cloud and Hetzner Cloud servers. Your credentials and data stay on your device.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="assets/icon.png" alt="">OmniCloud</a>
+      <nav>
+        <a href="./" aria-current="page">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <img src="assets/icon.png" alt="OmniCloud app icon">
+      <div>
+        <h1>OmniCloud</h1>
+        <p>A multi-cloud console for iPhone and iPad. See and manage the servers in your own Google Cloud, Oracle Cloud and Hetzner Cloud accounts in one place.</p>
+      </div>
+    </section>
+
+    <div class="notice">
+      <strong>Local-first by design.</strong> OmniCloud has no account system and runs no servers of its own.
+      The app talks directly from your device to each cloud provider. Credentials are kept only in your
+      device’s Keychain, and resource data is cached only on your device.
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>One view of every cloud</h3>
+        <p>Instances, networks, firewalls and volumes from several providers and accounts, with their real regions and states.</p>
+      </div>
+      <div class="card">
+        <h3>Everyday operations</h3>
+        <p>Start, stop, restart, resize and delete instances, change public addresses, and edit firewall rules and subnets.</p>
+      </div>
+      <div class="card">
+        <h3>Create servers</h3>
+        <p>Choose a zone, machine type, image and disk, compare prices across regions, and create an instance in a few taps.</p>
+      </div>
+      <div class="card">
+        <h3>Cost at a glance</h3>
+        <p>Month-to-date estimates from each provider’s published list prices, so you can see what is running and what it costs.</p>
+      </div>
+    </div>
+
+    <article>
+      <h2>Connecting Google Cloud</h2>
+      <p>When you choose <em>Sign in with Google</em>, OmniCloud opens Google’s own sign-in page in the system browser
+        sheet and asks for permission to manage your Google Cloud resources
+        (<code>https://www.googleapis.com/auth/cloud-platform</code>). OmniCloud never sees your Google password.</p>
+      <p>After you pick one of your projects, the app prepares it so it can manage Compute Engine on your behalf:</p>
+      <ol>
+        <li>Enables the Compute Engine, IAM, Cloud Resource Manager and Cloud Billing (price catalog) APIs in that project.</li>
+        <li>Creates a service account named <code>omnicloud-ios</code> in that project.</li>
+        <li>Grants it the Compute Admin and Service Account User roles on that project only.</li>
+        <li>Creates a key for that service account and stores it in your device’s Keychain.</li>
+      </ol>
+      <p>If your organization does not allow service account keys, the app instead keeps your Google sign-in token in the
+        Keychain and acts with your own permissions. You can revoke access at any time; see the
+        <a href="privacy.html#revoke">Privacy Policy</a>.</p>
+      <p>You can also connect a project by importing a service account key file that you created yourself.</p>
+    </article>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:lovele.cn@gmail.com">Contact</a>
+      <div>© 2026 OmniCloud</div>
+    </div>
+  </footer>
+</body>
+</html>
