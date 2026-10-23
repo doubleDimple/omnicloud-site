@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Terms of Service — OmniCloud</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Terms of Service | OmniCloud</title>
+  <meta name="description" content="Terms for using OmniCloud to manage your cloud accounts and resources.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/site.js" defer></script>
 </head>
-<body>
+<body class="legal-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site">
     <div class="wrap">
-      <a class="brand" href="./"><img src="assets/icon.png" alt="">OmniCloud</a>
-      <nav>
+      <a class="brand" href="./"><img src="assets/icon.png" alt="" width="32" height="32">OmniCloud</a>
+      <nav aria-label="Main navigation">
         <a href="./">Home</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html" aria-current="page">Terms of Service</a>
@@ -19,16 +23,32 @@
     </div>
   </header>
 
-  <main class="wrap">
-    <article>
-      <h1>Terms of Service</h1>
-      <p class="meta">Effective date: October 18, 2026</p>
+  <main class="wrap legal-layout" id="main-content" tabindex="-1">
+    <aside class="legal-sidebar">
+      <details class="toc" open>
+        <summary>On this page</summary>
+        <nav aria-label="Table of contents">
+          <a href="#the-app">The app</a>
+          <a href="#responsibilities">Your responsibilities</a>
+          <a href="#prices">Prices and estimates</a>
+          <a href="#third-party-services">Third-party services</a>
+          <a href="#disclaimer">Disclaimer</a>
+          <a href="#changes">Changes</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </details>
+    </aside>
+    <article class="document" aria-labelledby="page-title">
+      <header class="document-header">
+        <h1 id="page-title">Terms of Service</h1>
+        <p class="meta">Effective date: October 18, 2026</p>
+      </header>
 
-      <h2>The app</h2>
+      <h2 id="the-app">The app</h2>
       <p>OmniCloud lets you view and manage resources in cloud accounts that you own or are authorized to manage. You
         connect those accounts yourself, and every action the app performs is one you request.</p>
 
-      <h2>Your responsibilities</h2>
+      <h2 id="responsibilities">Your responsibilities</h2>
       <ul>
         <li>Use OmniCloud only with cloud accounts and projects you are permitted to manage.</li>
         <li>You are responsible for your cloud providers’ charges, including those for servers, disks, IP addresses and
@@ -37,33 +57,35 @@
           lock.</li>
       </ul>
 
-      <h2>Prices and estimates</h2>
+      <h2 id="prices">Prices and estimates</h2>
       <p>Prices and cost estimates shown in the app come from providers’ published list prices or local estimates. They
         exclude taxes and discounts and are for guidance only. Your provider’s invoice is authoritative.</p>
 
-      <h2>Third-party services</h2>
+      <h2 id="third-party-services">Third-party services</h2>
       <p>Google Cloud, Oracle Cloud and Hetzner Cloud are independent services governed by their own terms. OmniCloud is
         not affiliated with or endorsed by them.</p>
 
-      <h2>Disclaimer</h2>
+      <h2 id="disclaimer">Disclaimer</h2>
       <p>The app is provided “as is”. Cloud operations such as deleting a server or replacing an address can be
         irreversible; the app asks for confirmation, but you are responsible for the actions you confirm. To the extent
         permitted by law, we are not liable for data loss, downtime or charges resulting from use of the app.</p>
 
-      <h2>Changes</h2>
+      <h2 id="changes">Changes</h2>
       <p>These terms may be updated. The current version is always available on this page.</p>
 
-      <h2>Contact</h2>
+      <h2 id="contact">Contact</h2>
       <p><a href="mailto:lovele.cn@gmail.com">lovele.cn@gmail.com</a></p>
     </article>
   </main>
 
   <footer class="site">
     <div class="wrap">
-      <a href="./">Home</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="mailto:lovele.cn@gmail.com">Contact</a>
-      <div>© 2026 OmniCloud</div>
+      <div class="footer-links">
+        <a href="./">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:lovele.cn@gmail.com">Contact</a>
+      </div>
+      <p class="copyright">© 2026 OmniCloud</p>
     </div>
   </footer>
 </body>

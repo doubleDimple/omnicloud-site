@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OmniCloud — Multi-cloud console for iPhone and iPad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>OmniCloud | Multi-cloud console for iPhone and iPad</title>
   <meta name="description" content="OmniCloud is an iPhone and iPad app for managing your own Google Cloud, Oracle Cloud and Hetzner Cloud servers. Your credentials and data stay on your device.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/icon.png">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site">
     <div class="wrap">
-      <a class="brand" href="./"><img src="assets/icon.png" alt="">OmniCloud</a>
-      <nav>
+      <a class="brand" href="./"><img src="assets/icon.png" alt="" width="32" height="32">OmniCloud</a>
+      <nav aria-label="Main navigation">
         <a href="./" aria-current="page">Home</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
@@ -21,14 +22,25 @@
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <img src="assets/icon.png" alt="OmniCloud app icon">
-      <div>
-        <h1>OmniCloud</h1>
+  <main class="wrap" id="main-content" tabindex="-1">
+    <section class="hero" aria-labelledby="page-title">
+      <img src="assets/icon.png" alt="" width="168" height="168">
+      <div class="hero-copy">
+        <h1 id="page-title">OmniCloud</h1>
         <p>A multi-cloud console for iPhone and iPad. See and manage the servers in your own Google Cloud, Oracle Cloud and Hetzner Cloud accounts in one place.</p>
       </div>
     </section>
+
+    <nav class="legal-links" aria-label="Legal information">
+      <a class="legal-link" href="privacy.html">
+        <span><strong>Privacy Policy</strong><small>How the app handles your data.</small></span>
+        <span class="link-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="legal-link" href="terms.html">
+        <span><strong>Terms of Service</strong><small>The terms for using OmniCloud.</small></span>
+        <span class="link-arrow" aria-hidden="true">↗</span>
+      </a>
+    </nav>
 
     <div class="notice">
       <strong>Local-first by design.</strong> OmniCloud has no account system and runs no servers of its own.
@@ -38,24 +50,24 @@
 
     <div class="grid">
       <div class="card">
-        <h3>One view of every cloud</h3>
+        <h2>One view of every cloud</h2>
         <p>Instances, networks, firewalls and volumes from several providers and accounts, with their real regions and states.</p>
       </div>
       <div class="card">
-        <h3>Everyday operations</h3>
+        <h2>Everyday operations</h2>
         <p>Start, stop, restart, resize and delete instances, change public addresses, and edit firewall rules and subnets.</p>
       </div>
       <div class="card">
-        <h3>Create servers</h3>
+        <h2>Create servers</h2>
         <p>Choose a zone, machine type, image and disk, compare prices across regions, and create an instance in a few taps.</p>
       </div>
       <div class="card">
-        <h3>Cost at a glance</h3>
+        <h2>Cost at a glance</h2>
         <p>Month-to-date estimates from each provider’s published list prices, so you can see what is running and what it costs.</p>
       </div>
     </div>
 
-    <article>
+    <article class="home-document">
       <h2>Connecting Google Cloud</h2>
       <p>When you choose <em>Sign in with Google</em>, OmniCloud opens Google’s own sign-in page in the system browser
         sheet and asks for permission to manage your Google Cloud resources
@@ -76,10 +88,12 @@
 
   <footer class="site">
     <div class="wrap">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="mailto:lovele.cn@gmail.com">Contact</a>
-      <div>© 2026 OmniCloud</div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:lovele.cn@gmail.com">Contact</a>
+      </div>
+      <p class="copyright">© 2026 OmniCloud</p>
     </div>
   </footer>
 </body>

@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy — OmniCloud</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Privacy Policy | OmniCloud</title>
   <meta name="description" content="How the OmniCloud app handles your data, including data accessed through Google APIs.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/site.js" defer></script>
 </head>
-<body>
+<body class="legal-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site">
     <div class="wrap">
-      <a class="brand" href="./"><img src="assets/icon.png" alt="">OmniCloud</a>
-      <nav>
+      <a class="brand" href="./"><img src="assets/icon.png" alt="" width="32" height="32">OmniCloud</a>
+      <nav aria-label="Main navigation">
         <a href="./">Home</a>
         <a href="privacy.html" aria-current="page">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
@@ -20,16 +23,36 @@
     </div>
   </header>
 
-  <main class="wrap">
-    <article>
-      <h1>Privacy Policy</h1>
-      <p class="meta">Effective date: October 18, 2026</p>
+  <main class="wrap legal-layout" id="main-content" tabindex="-1">
+    <aside class="legal-sidebar">
+      <details class="toc" open>
+        <summary>On this page</summary>
+        <nav aria-label="Table of contents">
+          <a href="#summary">Summary</a>
+          <a href="#stored-information">Information the app stores on your device</a>
+          <a href="#google">Data accessed through Google APIs</a>
+          <a href="#other-providers">Other cloud providers</a>
+          <a href="#sharing">Sharing</a>
+          <a href="#retention">Retention and deletion</a>
+          <a href="#revoke">Revoking Google access</a>
+          <a href="#security">Security</a>
+          <a href="#children">Children</a>
+          <a href="#changes">Changes</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </details>
+    </aside>
+    <article class="document" aria-labelledby="page-title">
+      <header class="document-header">
+        <h1 id="page-title">Privacy Policy</h1>
+        <p class="meta">Effective date: October 18, 2026</p>
+      </header>
 
       <p>This policy describes how the OmniCloud app for iPhone and iPad (“OmniCloud”, “the app”, “we”) handles
         information. OmniCloud is a client for cloud providers you already use. It is designed to keep your data on your
         device.</p>
 
-      <h2>Summary</h2>
+      <h2 id="summary">Summary</h2>
       <ul>
         <li>OmniCloud has no user accounts and operates no servers. We do not collect, receive or store any of your data.</li>
         <li>The app communicates directly from your device with the cloud providers you connect (Google Cloud, Oracle Cloud,
@@ -38,18 +61,26 @@
         <li>There are no advertisements, analytics, tracking or third-party SDKs that collect data.</li>
       </ul>
 
-      <h2>Information the app stores on your device</h2>
-      <table>
-        <tr><th>Information</th><th>Where it is kept</th><th>Purpose</th></tr>
-        <tr><td>Cloud credentials: Google service account keys or sign-in tokens, Oracle API keys, Hetzner API tokens</td>
-          <td>Device Keychain (this device only)</td><td>Authenticating your requests to the provider you connected</td></tr>
-        <tr><td>Account names you enter, project and region identifiers</td><td>Local database on the device</td>
-          <td>Showing and organizing your connected accounts</td></tr>
-        <tr><td>Cached resource details: instance names, states, IP addresses, machine types, networks, firewall rules</td>
-          <td>Local database on the device</td><td>Showing your resources quickly and offline</td></tr>
-        <tr><td>Public price lists from Google Cloud</td><td>App cache on the device</td><td>Estimating costs and comparing regions</td></tr>
-        <tr><td>Preferences: language, appearance, app lock</td><td>Device settings</td><td>Remembering your choices</td></tr>
-      </table>
+      <h2 id="stored-information">Information the app stores on your device</h2>
+      <p class="table-hint" id="table-help">Scroll the table horizontally to read all columns.</p>
+      <div class="table-scroll" role="region" aria-label="Information stored on your device" aria-describedby="table-help" tabindex="0">
+        <table>
+          <caption class="sr-only">Information stored on your device</caption>
+          <thead>
+            <tr><th scope="col">Information</th><th scope="col">Where it is kept</th><th scope="col">Purpose</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Cloud credentials: Google service account keys or sign-in tokens, Oracle API keys, Hetzner API tokens</td>
+              <td>Device Keychain (this device only)</td><td>Authenticating your requests to the provider you connected</td></tr>
+            <tr><td>Account names you enter, project and region identifiers</td><td>Local database on the device</td>
+              <td>Showing and organizing your connected accounts</td></tr>
+            <tr><td>Cached resource details: instance names, states, IP addresses, machine types, networks, firewall rules</td>
+              <td>Local database on the device</td><td>Showing your resources quickly and offline</td></tr>
+            <tr><td>Public price lists from Google Cloud</td><td>App cache on the device</td><td>Estimating costs and comparing regions</td></tr>
+            <tr><td>Preferences: language, appearance, app lock</td><td>Device settings</td><td>Remembering your choices</td></tr>
+          </tbody>
+        </table>
+      </div>
       <p>Root passwords generated when you create a server are shown to you once and are never stored. On Google Cloud,
         the password is sent to your instance only as a one-way SHA-512 hash and removed from the instance’s metadata after
         it has been applied.</p>
@@ -83,15 +114,15 @@
         <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
         including the Limited Use requirements.</p>
 
-      <h2>Other cloud providers</h2>
+      <h2 id="other-providers">Other cloud providers</h2>
       <p>Oracle Cloud and Hetzner Cloud credentials that you enter are used only to call those providers’ APIs from your
         device, in the same way. Each provider processes your requests under its own privacy policy.</p>
 
-      <h2>Sharing</h2>
+      <h2 id="sharing">Sharing</h2>
       <p>We do not sell, share or transfer your information. The only parties that receive it are the cloud providers you
         connect, and only to fulfil your requests. Purchases are handled by Apple through the App Store.</p>
 
-      <h2>Retention and deletion</h2>
+      <h2 id="retention">Retention and deletion</h2>
       <ul>
         <li><em>Data &amp; Privacy</em> in the app can clear all cached resource data, or remove all accounts on this device
           together with their Keychain credentials.</li>
@@ -110,28 +141,30 @@
           <code>omnicloud-ios</code> service account or its keys.</li>
       </ul>
 
-      <h2>Security</h2>
+      <h2 id="security">Security</h2>
       <p>Credentials are protected by iOS Keychain encryption and are only available while the device is unlocked. All
         network requests use HTTPS directly to the provider. You can also lock the app with Face ID or your device
         passcode.</p>
 
-      <h2>Children</h2>
+      <h2 id="children">Children</h2>
       <p>OmniCloud is a tool for managing cloud infrastructure and is not directed to children under 13.</p>
 
-      <h2>Changes</h2>
+      <h2 id="changes">Changes</h2>
       <p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
 
-      <h2>Contact</h2>
+      <h2 id="contact">Contact</h2>
       <p>Questions about this policy: <a href="mailto:lovele.cn@gmail.com">lovele.cn@gmail.com</a></p>
     </article>
   </main>
 
   <footer class="site">
     <div class="wrap">
-      <a href="./">Home</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="mailto:lovele.cn@gmail.com">Contact</a>
-      <div>© 2026 OmniCloud</div>
+      <div class="footer-links">
+        <a href="./">Home</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:lovele.cn@gmail.com">Contact</a>
+      </div>
+      <p class="copyright">© 2026 OmniCloud</p>
     </div>
   </footer>
 </body>
