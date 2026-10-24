@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Terms of Service | OmniCloud</title>
-  <meta name="description" content="Terms for using OmniCloud to manage your cloud accounts and resources.">
+  <meta name="description" content="Terms for using OmniCloud with cloud providers, Cloudflare, your own servers and App Store subscriptions.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/icon.png">
   <link rel="stylesheet" href="assets/style.css">
@@ -41,16 +41,24 @@
     <article class="document" aria-labelledby="page-title">
       <header class="document-header">
         <h1 id="page-title">Terms of Service</h1>
-        <p class="meta">Effective date: October 18, 2026</p>
+        <p class="meta">Effective date: October 24, 2026</p>
       </header>
 
       <h2 id="the-app">The app</h2>
-      <p>OmniCloud lets you view and manage resources in cloud accounts that you own or are authorized to manage. You
-        connect those accounts yourself, and every action the app performs is one you request.</p>
+      <p>OmniCloud connects to cloud accounts and servers that you own or are authorized to manage. It supports Oracle Cloud,
+        Hetzner Cloud, Google Cloud, Amazon Web Services (AWS), Microsoft Azure, netcup and OVHcloud, with different features
+        available for each provider. Cloudflare has a separate workspace. SSH and SFTP tools connect directly to servers
+        you provide.</p>
+      <p>You choose the accounts, connections and operations. Some features continue after setup, such as credential renewal,
+        enabled iCloud synchronization and certificate renewal on your server. There is no OmniCloud-operated cloud-management
+        backend.</p>
+      <p>Websites &amp; Certificates installs and manages Nginx on a supported server you provide. The first version supports
+        a fresh server or a recognized OmniCloud installation; it does not take over an existing, independently installed
+        Nginx. Installation and certificate tasks run on your server and can continue after the app disconnects.</p>
 
       <h2 id="responsibilities">Your responsibilities</h2>
       <ul>
-        <li>Use OmniCloud only with cloud accounts and projects you are permitted to manage.</li>
+        <li>Use OmniCloud only with cloud accounts, projects, domains and servers you are permitted to manage.</li>
         <li>You are responsible for your cloud providers’ charges, including those for servers, disks, IP addresses and
           traffic that you create or keep through the app.</li>
         <li>Keep your device secure. Anyone who can unlock the app can use its connected accounts; consider enabling the app
@@ -58,12 +66,18 @@
       </ul>
 
       <h2 id="prices">Prices and estimates</h2>
-      <p>Prices and cost estimates shown in the app come from providers’ published list prices or local estimates. They
-        exclude taxes and discounts and are for guidance only. Your provider’s invoice is authoritative.</p>
+      <p>Cloud prices and cost estimates come from providers’ published prices, available billing data or local estimates.
+        Currency conversions use public European Central Bank reference rates when available. Estimates may differ from
+        checkout totals because of taxes, discounts, usage or exchange rates. Your provider’s invoice is authoritative.</p>
+      <p>Pro and Pro+ subscriptions are purchased and managed through Apple. The app shows the App Store price and billing
+        period before purchase; any trial is shown only when Apple reports it is available to you. Subscription charges
+        are separate from cloud-provider and server charges. Removing the app does not cancel an Apple subscription.</p>
 
       <h2 id="third-party-services">Third-party services</h2>
-      <p>Google Cloud, Oracle Cloud and Hetzner Cloud are independent services governed by their own terms. OmniCloud is
-        not affiliated with or endorsed by them.</p>
+      <p>Oracle Cloud, Hetzner Cloud, Google Cloud, AWS, Microsoft Azure, netcup, OVHcloud and Cloudflare are independent
+        services governed by their own terms. Apple handles subscriptions and optional iCloud synchronization. Certificate
+        tasks use Let’s Encrypt and Cloudflare from your server. These services and their charges are governed by their
+        respective terms; OmniCloud is not affiliated with or endorsed by the cloud providers.</p>
 
       <h2 id="disclaimer">Disclaimer</h2>
       <p>The app is provided “as is”. Cloud operations such as deleting a server or replacing an address can be
