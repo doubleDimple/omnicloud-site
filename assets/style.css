@@ -68,8 +68,8 @@ header.site .wrap {
 }
 .brand { display: inline-flex; align-items: center; flex-shrink: 0; gap: .625rem; color: var(--ink); font-size: 1.125rem; font-weight: 700; letter-spacing: -.035em; text-decoration: none; min-height: 44px; }
 .brand img { width: 32px; height: 32px; border-radius: 8px; }
-header.site nav { display: flex; gap: .375rem; align-items: center; }
-header.site nav a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: .625rem .875rem; border-radius: 10px; color: var(--muted); font-size: .875rem; font-weight: 550; text-decoration: none; text-align: center; }
+header.site nav { display: flex; flex-wrap: wrap; min-width: 0; gap: .375rem; align-items: center; }
+header.site nav a { display: flex; flex: 1 0 auto; align-items: center; justify-content: center; min-height: 44px; padding: .625rem .875rem; border-radius: 10px; color: var(--muted); font-size: .875rem; font-weight: 550; text-decoration: none; text-align: center; overflow-wrap: normal; }
 header.site nav a[aria-current="page"] { color: var(--accent); background: var(--accent-soft); }
 header.site nav a:hover { color: var(--accent); background: var(--accent-soft); }
 .hero {
@@ -159,8 +159,8 @@ footer.site .wrap { display: flex; align-items: center; justify-content: space-b
 @media (max-width: 767px) {
   .table-hint { display: block; }
   header.site .wrap { flex-direction: column; align-items: flex-start; gap: .5rem; padding-block: .75rem; }
-  header.site nav { width: 100%; flex-wrap: wrap; gap: .25rem; }
-  header.site nav a { flex: 1 0 auto; padding-inline: .5rem; font-size: .8125rem; overflow-wrap: normal; }
+  header.site nav { width: 100%; gap: .25rem; }
+  header.site nav a { padding-inline: .5rem; font-size: .8125rem; }
   .hero { margin-top: 1.5rem; gap: 1.5rem; }
   .hero img { width: 88px; }
   .legal-links { gap: 1rem; }
